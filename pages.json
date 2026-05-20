@@ -1,0 +1,56 @@
+{
+  "pages": [
+    { "path": "pages/home/index", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/statistics/index", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/add/index", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/ledger/index", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/profile/index", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/ledger/merge", "style": { "navigationBarTitleText": "合并账本" } },
+    { "path": "pages/ledger/import-assign", "style": { "navigationBarTitleText": "导入账本" } },
+    { "path": "pages/pending/index", "style": { "navigationBarTitleText": "待确认账单" } }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "家账",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#F5F5FA"
+  },
+  "tabBar": {
+    "color": "#9CA3AF",
+    "selectedColor": "#6366F1",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "static/tab/home.png",
+        "selectedIconPath": "static/tab/home-active.png"
+      },
+      {
+        "pagePath": "pages/statistics/index",
+        "text": "统计",
+        "iconPath": "static/tab/stats.png",
+        "selectedIconPath": "static/tab/stats-active.png"
+      },
+      {
+        "pagePath": "pages/add/index",
+        "text": "记账",
+        "iconPath": "static/tab/add.png",
+        "selectedIconPath": "static/tab/add-active.png"
+      },
+      {
+        "pagePath": "pages/ledger/index",
+        "text": "账本",
+        "iconPath": "static/tab/ledger.png",
+        "selectedIconPath": "static/tab/ledger-active.png"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "text": "我的",
+        "iconPath": "static/tab/profile.png",
+        "selectedIconPath": "static/tab/profile-active.png"
+      }
+    ]
+  }
+}
