@@ -40,14 +40,16 @@
         v-model="form.note"
         placeholder="📝 添加备注..."
         placeholder-class="note-placeholder"
+        @focus="noteFocused = true"
+        @blur="noteFocused = false"
       />
     </view>
 
     <!-- 键盘占位 -->
-    <view class="keypad-placeholder" />
+    <view v-if="!noteFocused" class="keypad-placeholder" />
 
     <!-- 数字键盘 -->
-    <NumberKeypad v-model="displayAmount" />
+    <NumberKeypad v-if="!noteFocused" v-model="displayAmount" />
   </view>
 </template>
 
@@ -73,6 +75,7 @@ const form = reactive({
 })
 
 const displayAmount = ref('')
+const noteFocused = ref(false)
 
 const paymentMethods: PaymentOption[] = [
   { value: 'wechat', label: '微信支付' },
