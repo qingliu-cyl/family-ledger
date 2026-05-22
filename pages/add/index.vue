@@ -45,9 +45,6 @@
       />
     </view>
 
-    <!-- 键盘占位 -->
-    <view v-if="!noteFocused" class="keypad-placeholder" />
-
     <!-- 数字键盘 -->
     <NumberKeypad v-if="!noteFocused" v-model="displayAmount" />
   </view>
@@ -222,15 +219,14 @@ function goBack(): void {
 }
 
 .note-input {
-  padding: 24rpx 0;
+  width: 100%;
+  padding: 28rpx 16rpx;
   font-size: $body-size;
+  min-height: 96rpx;
+  box-sizing: border-box;
 }
 
 .note-placeholder {
   color: $text-tertiary;
-}
-
-.keypad-placeholder {
-  height: 440rpx;
 }
 </style>

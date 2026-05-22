@@ -60,10 +60,6 @@ function onKey(key: string): void {
 
 <style lang="scss" scoped>
 .keypad {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
   background: $card-bg;
   padding: 12rpx 8rpx 40rpx;
   box-shadow: 0 -4rpx 20rpx rgba(0, 0, 0, 0.06);
