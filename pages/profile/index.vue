@@ -77,6 +77,11 @@
       </view>
     </view>
 
+    <!-- 版本号 -->
+    <view class="version-info">
+      <text class="version-text">版本 {{ version }}</text>
+    </view>
+
     <!-- 添加成员弹窗 -->
     <view class="modal-overlay" v-if="showAddMember" @click="showAddMember = false">
       <view class="modal-box" @click.stop>
@@ -123,6 +128,7 @@ import { openNotificationSettings } from '@/utils/payment-listener'
 const memberStore = useMemberStore()
 const ledgerStore = useLedgerStore()
 
+const version = ref('1.0.2')
 const showAddMember = ref(false)
 const newMemberName = ref('')
 const newMemberAvatar = ref('👨')
@@ -349,6 +355,16 @@ function clearAllData() {
 
   &.red {
     color: $expense-red;
+  }
+}
+
+.version-info {
+  text-align: center;
+  padding: 48rpx 0 24rpx;
+
+  .version-text {
+    font-size: $tiny-size;
+    color: $text-tertiary;
   }
 }
 
